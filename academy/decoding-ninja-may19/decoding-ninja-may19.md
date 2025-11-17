@@ -36,10 +36,17 @@ Result after decoding:
 JTQ4JTU0JTQyJTdiJTMz...
 
 ### Step 2 – URL Decode
-- Recognized the format `JTxx` → corresponds to `%xx` in URL encoding
-- Decoded to plain ASCII using Burp Suite Decoder and CyberChef
+- Recognized the format JTxx → corresponds to %xx in URL encoding
+- Used Burp Suite Decoder for step-by-step visualization
+- Each decode iteration shown in separate panel for verification
 
 <img src="screenshots/decoding-burp-steps.png" width="700"/>
+
+Visual progression:
+- Input (yellow): VTJ4U1VrNUZj... (Base64)
+- After 4× Base64 decode (yellow): JTO4JTU0JTQy... (URL-encoded)
+- After URL decode (red): Final flag revealed
+
 
 ---
 
@@ -50,13 +57,14 @@ Successfully revealed a flag in the format: `HTB{*****}`
 
 ---
 
-## Key Takeaways
-
-- **Layered encodings** are common in web challenges and must be peeled back systematically.
-- Tools like **CyberChef** are highly effective for chaining decoding operations.
-- Recognizing visual encoding cues (like `=`, `%`, or `JT`) is essential for quick analysis.
+## Additional Lessons
+- Document with screenshots - memory can be unreliable
+- Visual tools (like Burp Decoder) help verify multi-stage decoding
+- Pattern recognition improves with practice: 
+  - == padding → Base64
+  - JTxx format → URL encoding
+  - %xx format → URL encoding
 
 ---
 
-*Challenge completed under HTB Academy guidelines.*  
 *Write-up by [@emi-8](https://github.com/emi-8)*
