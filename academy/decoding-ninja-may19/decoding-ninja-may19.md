@@ -1,13 +1,13 @@
-# 🧩 HTB Academy – Using Web Proxies: Encoding/Decoding
+# HTB Academy – Using Web Proxies: Encoding/Decoding
 
-📚 **Module:** [Using Web Proxies Encoding/Decoding](https://academy.hackthebox.com/module/110/section/1052)  
-🛡️ **Path:** Bug Bounty Hunter  
-🗓️ **Date Solved:** 2025-05-19  
-🔧 **Skills Demonstrated:** Multi-layer encoding recognition, Base64/URL decoding, use of Burp Suite, CLI efficiency, analytical problem-solving
+**Module:** [Using Web Proxies Encoding/Decoding](https://academy.hackthebox.com/module/110/section/1052)  
+**Path:** Bug Bounty Hunter  
+**Date Solved:** 2025-05-19  
+**Skills Demonstrated:** Multi-layer encoding recognition, Base64/URL decoding, use of Burp Suite, CLI efficiency, analytical problem-solving
 
 ---
 
-## 🧠 Challenge Overview
+## Challenge Overview
 
 This HTB Academy module involves decoding a deeply encoded string using web proxy tools and pattern recognition. The goal is to decode step-by-step and recognize encoding techniques often used in bug bounty or CTF scenarios.
 
@@ -18,14 +18,14 @@ The challenge emphasizes:
 
 ---
 
-### 🔐 Input String
+### Input String
 
 **Input:**
 VTJ4U1VrNUZjRlZXVkVKTFZrWkdOVk5zVW10aFZYQlZWRmh3UzFaR2NITlRiRkphWld0d1ZWUllaRXRXUm10M1UyeFNUbVZGY0ZWWGJYaExWa1V3ZVZOc1VsZGlWWEJWVjIxNFMxWkZNVFJUYkZKaFlrVndWVmR0YUV0V1JUQjNVMnhTYTJGM1BUMD0=
 
 ---
 
-## 🔍 Decoding Steps
+## Decoding Steps
 
 ### Step 1 – Base64 Decode ×4
 - Noted the padded `==` ending (indicator of Base64)
@@ -43,14 +43,14 @@ JTQ4JTU0JTQyJTdiJTMz...
 
 ---
 
-## ✅ Final Output
+## Final Output
 
 Successfully revealed a flag in the format: `HTB{*****}`  
 (The full flag has been omitted to avoid spoilers.)
 
 ---
 
-## 💡 Key Takeaways
+## Key Takeaways
 
 - **Layered encodings** are common in web challenges and must be peeled back systematically.
 - Tools like **CyberChef** are highly effective for chaining decoding operations.
@@ -58,5 +58,5 @@ Successfully revealed a flag in the format: `HTB{*****}`
 
 ---
 
-🔒 *Challenge completed under HTB Academy guidelines.*  
-✍️ *Write-up by [@emi-8](https://github.com/emi-8)*
+*Challenge completed under HTB Academy guidelines.*  
+*Write-up by [@emi-8](https://github.com/emi-8)*
