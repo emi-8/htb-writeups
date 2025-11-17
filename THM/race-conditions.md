@@ -101,3 +101,7 @@ calculatedfee: 0.05
 ## Status: COMPLETED
 
 Challenge completed with both a working exploit and a valuable real-world lesson in backend security validation.
+
+---
+
+Write-up by @emi-8
