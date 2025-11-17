@@ -102,6 +102,4 @@ calculatedfee: 0.05
 
 Challenge completed with both a working exploit and a valuable real-world lesson in backend security validation.
 
----
-
-Write-up by @emi-8
+*Write-up by [@emi-8](https://github.com/emi-8)*
