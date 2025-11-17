@@ -1,20 +1,19 @@
-# 🏋️ TryHackMe — Race Conditions (Web) Write-Up
+# TryHackMe — Race Conditions (Web) Write-Up
 
-## 🧠 Overview
+## Overview
 
 This TryHackMe room explores **race conditions** in web applications, particularly **Time of Check to Time of Use (TOCTOU)** vulnerabilities. The goal was to exploit a vulnerable banking app and get any one user account above **\$1000** to retrieve the flag.
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 
 * Burp Suite (Repeater with parallel request group)
 * Web browser (via AttackBox)
-* 💡Curiosity, caffeine, and Kiki 🐱
 
 ---
 
-## 🔍 Recon and Initial Observations
+## Recon and Initial Observations
 
 Three users were provided, each with login credentials. Once inside the app, users could transfer funds to each other. A small fee was deducted on each transfer, and balances were displayed clearly.
 
@@ -26,7 +25,7 @@ I tested:
 
 ---
 
-## 🔧 Exploitation Phase 1: Race Condition
+## Exploitation Phase 1: Race Condition
 
 1. Captured a **valid transfer request** with Burp:
 
@@ -50,7 +49,7 @@ These strange floats revealed that **multiple requests were being accepted simul
 
 ---
 
-## 🔥 Exploitation Phase 2: Parameter Tampering
+## Exploitation Phase 2: Parameter Tampering
 
 Curious, I tested mismatched values like:
 
@@ -77,7 +76,7 @@ THM{****-***-****}
 
 ---
 
-## 🏆 Final Payload
+## Final Payload
 
 ```http
 POST /transfer/6282 HTTP/1.1
@@ -90,7 +89,7 @@ calculatedfee: 0.05
 
 ---
 
-## 🧠 Lessons Learned
+## Lessons Learned
 
 * **Race conditions** can be subtle but powerful when exploited at scale
 * **Parameter tampering** is still alive and well in poorly validated forms
@@ -99,6 +98,6 @@ calculatedfee: 0.05
 
 ---
 
-## ✅ Status: COMPLETED
+## Status: COMPLETED
 
-Challenge completed with both a working exploit and a valuable real-world lesson in backend security validation. 🧪💸
+Challenge completed with both a working exploit and a valuable real-world lesson in backend security validation.
