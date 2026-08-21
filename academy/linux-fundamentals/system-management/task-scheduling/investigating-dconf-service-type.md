@@ -66,4 +66,4 @@ systemctl show may not always return the expected value.
 User-level systemd services can be stored under /usr/lib/systemd/user/.
 If a command does not give enough information, checking the underlying service file directly can help.
 
-Write-up by @emi-8
+*Write-up by [@emi-8](https://github.com/emi-8)*
